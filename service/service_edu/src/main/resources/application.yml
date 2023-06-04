@@ -1,0 +1,36 @@
+#服务端口
+server:
+  port: 8001
+
+spring:
+  application:
+    name: service-edu
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: gwy123456
+  jackson:
+    #返回json的全局时间格式
+    date-format: yyyy-MM-dd HH:mm:ss
+  #nacos的服务地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#mybatis-plus:
+#  configuration:
+#   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#配置mapper xml文件的路径
+mybatis-plus:
+  mapper-locations: classpath:com/buqi/eduservice/mapper/xml/*.xml
+
+#开启熔断机制
+#feign:
+ # hystrix:
+  #  enabled: false
+
+
+

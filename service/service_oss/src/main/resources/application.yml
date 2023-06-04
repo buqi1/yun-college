@@ -1,0 +1,20 @@
+aliyun:
+    oss:
+        file:
+            bucketname: edu-buqi
+            endpoint: oss-cn-beijing.aliyuncs.com
+            keyid: LTAI5t8813SVctHwYrSYhdbH
+            keysecret: qkunetdOtRzCsCiyR0r1bjaXXPWvhF
+server:
+    port: 8002
+spring:
+    application:
+        name: service-oss
+    profiles:
+        active: dev
+    #nacos的服务地址
+    cloud:
+        nacos:
+            discovery:
+                server-addr: 127.0.0.1:8848
+

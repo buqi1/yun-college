@@ -1,0 +1,25 @@
+
+aliyun:
+  vod:
+    file:
+      keyid: LTAI5t8813SVctHwYrSYhdbH
+      keysecret: qkunetdOtRzCsCiyR0r1bjaXXPWvhF
+# 服务端口
+server:
+  port: 8003
+
+spring:
+  application:
+    name: service-vod
+  profiles:
+    active: dev
+
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  #nacos的服务地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
